@@ -61,11 +61,27 @@ we finally predict based on 1st and 2nd predictions
 - Catboost
 - SKlearn's GBM
 
+# Stacking
+means making predictions of a number of models in hold-out set and then using a different model to train these predictions.
+## methodology
+- Wolpert in 1992 introduced stacking. it involves:
+1. Splitting the train set into two disjoint sets.
+2. train several ased learners on the first part.
+3. make predictions with the base learners on the second part
+4. using the predictions from (3) as the input train a higher level learner.
 
-'s
+## Still confused about stacking?
+train algorith 0-2 on A and make predictions for B and C and save t B1, C1
 
-
-
+## Stacking example
+## Things to be mindful of
+- with time sensitive data - respect time
+- diversity as important as performance
+- diversity may come from:
+1. different alogorithms
+2. different input features
+- performance plateauing after N models
+- meta model is normally modest
 
 
 
